@@ -5,6 +5,6 @@
 this will contain different pieces of work
 under construction currently
 
-## new section
+## week 1 contents
 
-this will show my new updated commit now
+* 
