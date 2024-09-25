@@ -24,7 +24,7 @@ If time
 Improve the program. For example, can you make it a "Choose your own adventure" story?
 """
 
-story1 ={"start":"there was a house on fire","middle","end"}
+story1 ={"start":"there was a house on fire","middle":"","end":""}
 print(story1)
 print(type(story1)) #prints a set type
 print(story1) #prints a set type
