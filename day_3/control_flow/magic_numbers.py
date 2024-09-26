@@ -71,12 +71,12 @@ max_tries=5
 guesses = 0
 random_num = random.randrange(1, 10)
 while guesses< max_tries:
-    magic_number_is_digits = False
-    while not magic_number_is_digits:
-        magic_number = input("guess a number")
-        magic_number_is_digits = magic_number.isdigit()
-        if magic_number_is_digits: magic_number = int(magic_number)
 
+    magic_number = input("guess a number")
+    if not magic_number.isdigit():
+        print(f"Invalid input: Attempt {max_tries - guesses} out of 5. Please enter a number")
+        continue
+    magic_number = int(magic_number)
     if magic_number == random_num:
         print("You are right!")
         break
