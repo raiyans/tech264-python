@@ -84,10 +84,11 @@ while guesses< max_tries:
         guesses += 1
         print(f"WRONG! You have {max_tries - guesses} guesses remaining loser!")
         if magic_number < random_num : print("gotta count higher than that number idiot")
-        elif magic_number > random_num : print("it's a smaller number like you")
-        print(random_num)
-    if guesses == max_tries:
-        print(f"You couldn't even guess {random_num}, pathetic")
+        elif magic_number > random_num : print("it's a smaller number like your iq")
+        # DEBUG answer
+        # print(random_num)
+if guesses >= max_tries:
+    print(f"You couldn't even guess {random_num}, pathetic")
 """
 
 
