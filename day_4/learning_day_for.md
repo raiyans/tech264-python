@@ -5,4 +5,6 @@ remote origin is the server im uploading to, and the branch is renamed to main a
 ```
 git remote add origin <github account>
 git branch -M main
-git push -u origin main```
+git push -u origin main
+```
+#modules=single file installed libraries=set of files imported packages=installable
