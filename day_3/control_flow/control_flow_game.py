@@ -40,31 +40,33 @@ Bonus: Want to play again?
 
 import random
 
-max_tries=5
-guesses = 0
-human_random_num, comp_random_num = random.randrange(1, 6)
+max_points=30
+human_random_roll, comp_random_roll = random.randrange(1, 6), random.randrange(1, 6)
+human_random_score, comp_random_score = 0, 0
 not_ready=True
 
+print(human_random_roll, comp_random_roll)
 while not_ready:
     if input("type yes if you are ready?")=="yes":
         not_ready =False
 name = input("what's your name?")
-
-while guesses< max_tries:
-    magic_number_is_digits = False
-    while not magic_number_is_digits:
-        magic_number = input("guess a number")
-        magic_number_is_digits = magic_number.isdigit()
-        if magic_number_is_digits: magic_number = int(magic_number)
-
-    if magic_number == human_random_num:
-        print("You are right!")
+print(f"first to 30 wins")
+print(human_random_score, comp_random_score)
+while human_random_score or comp_random_score <= 30:
+    input("Press enter to roll")
+    if human_random_roll > comp_random_roll:
+        print("You are win this time!")
+    if human_random_roll < comp_random_roll:
+        print("You lost!")
+    if human_random_roll == comp_random_roll:
+        print(f"its a draw")
+    human_random_score += human_random_roll
+    comp_random_score += comp_random_roll
+    print(human_random_score, comp_random_score)
+    if human_random_score >= 30:
+        print("you won the game")
         break
-    else:
-        guesses += 1
-        print(f"WRONG! You have {max_tries - guesses} guesses remaining loser!")
-        if magic_number < human_random_num : print("gotta count higher than that number idiot")
-        elif magic_number > human_random_num : print("it's a smaller number like you")
-        print(human_random_num)
-    if guesses == max_tries:
-        print(f"You couldn't even guess {human_random_num}, pathetic")
+    if comp_random_score >= 30:
+        print("you lost the game")
+        break
+    human_random_roll, comp_random_roll = random.randrange(1, 6), random.randrange(1, 6)
