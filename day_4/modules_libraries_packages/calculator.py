@@ -13,7 +13,7 @@ Taking it to the next level:
 Implement more complex operations, such as handling parentheses, exponentiation
 More advanced operations should continue to be broken into separate functions """
 from math_operations import *
-
+import math_operations
 
 print("Welcome to the basic calculator!")
 
@@ -25,7 +25,7 @@ operation = input("Choose an operation (+, -, *, /, **): ")
 # Perform the operation based on user input
 match operation:
     case "+":
-        print(f"The result of {num1} + {num2} is: {add(num1, num2)}")
+        print(f"The result of {num1} + {num2} is: {math_operations.add(num1, num2)}") #modules implemented
     case "-":
         print(f"The result of {num1} - {num2} is: {subtract(num1, num2)}")
     case "*":
