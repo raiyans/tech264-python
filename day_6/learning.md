@@ -6,3 +6,6 @@ some things that you dont want to add to your git repository
 * Hidden  system files 
 
 .gitignore is the solutions
+
+
+git rm --cached -r .\.idea 
